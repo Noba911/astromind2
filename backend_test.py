@@ -174,8 +174,8 @@ class AstrologyBackendTests(unittest.TestCase):
             logger.info(f"Sample content: {data['content'][:100]}...")
     
     def test_05_compatibility_analysis(self):
-        """Test compatibility analysis with partner birth data"""
-        logger.info("Testing compatibility analysis...")
+        """Test compatibility analysis with partner birth data using real Azure OpenAI"""
+        logger.info("Testing compatibility analysis with real Azure OpenAI...")
         
         # Ensure we have a token
         if not self.auth_token:
@@ -210,6 +210,10 @@ class AstrologyBackendTests(unittest.TestCase):
         self.assertIn("content", data, "Content missing in compatibility response")
         self.assertIn("tone", data, "Tone missing in compatibility response")
         self.assertTrue(len(data["content"]) > 100, "Compatibility content too short")
+        
+        # Verify this is not the mock response by checking for unique content
+        mock_content = "Compatibility Analysis: 78% Match"
+        self.assertNotIn(mock_content, data["content"], "Response appears to be the mock response")
         
         logger.info("Compatibility analysis generated successfully")
         logger.info(f"Sample content: {data['content'][:100]}...")
