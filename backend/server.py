@@ -32,6 +32,12 @@ AZURE_OPENAI_API_KEY = "PXTnKX40wdOdApyYQTW9Arppc6zFBjnf2kcd6WpBt9qfrA4UcnxJQQJ9
 AZURE_OPENAI_ENDPOINT = "https://astrology-ai.openai.azure.com/"
 AZURE_OPENAI_DEPLOYMENT = "astrology-ai"
 
+# Set environment variables for litellm
+os.environ["AZURE_API_KEY"] = AZURE_OPENAI_API_KEY
+os.environ["AZURE_API_BASE"] = AZURE_OPENAI_ENDPOINT
+os.environ["AZURE_API_VERSION"] = "2023-05-15"  # Use a valid API version
+os.environ["AZURE_DEPLOYMENT_NAME"] = AZURE_OPENAI_DEPLOYMENT
+
 # JWT Configuration
 JWT_SECRET = os.environ.get('JWT_SECRET', 'your-secret-key-here')
 JWT_ALGORITHM = "HS256"
