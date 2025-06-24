@@ -28,7 +28,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Azure OpenAI Configuration
-AZURE_OPENAI_API_KEY = "PXTnKX40wdOdApyYQTW9Arppc6zFBjnf2kcd6WpBt9qfrA4UcnxJQQJ99BFAC5RqLJXJ3w3AAABACOGYES0"
+AZURE_OPENAI_API_KEY = "FPXTnKX40wdOdApyYQTW9Arppc6zFBjnf2kcd6WpBt9qfrA4UcnxJQQJ99BFAC5RqLJXJ3w3AAABACOGYES0"
 AZURE_OPENAI_ENDPOINT = "https://astrology-ai.openai.azure.com/"
 AZURE_OPENAI_DEPLOYMENT = "astrology-ai"
 
