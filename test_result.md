@@ -240,3 +240,5 @@ agent_communication:
     message: "Initializing testing for all backend API endpoints as per the test plan."
   - agent: "testing"
     message: "All backend API endpoints have been tested and are working correctly. Fixed issues with MongoDB date serialization and JWT error handling. Added mock responses for AI endpoints since the actual Azure OpenAI API key is not valid in the testing environment."
+  - agent: "main"
+    message: "Switched from TESTING_MODE to real Azure OpenAI integration. Disabled mock responses and configured LlmChat for Azure OpenAI with api_base and deployment_name. All AI endpoints (Daily Horoscope, Compatibility Analysis, Friend Communication Advice) now need retesting with real Azure OpenAI API."
