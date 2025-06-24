@@ -19,8 +19,8 @@ import asyncio
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# Set testing mode for development/testing environments
-os.environ['TESTING_MODE'] = 'true'
+# Real production mode - use actual Azure OpenAI
+os.environ['TESTING_MODE'] = 'false'
 
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
