@@ -20,10 +20,7 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
 # Real production mode - use actual Azure OpenAI
-# os.environ['TESTING_MODE'] = 'false'
-
-# For testing purposes, use mock responses
-os.environ['TESTING_MODE'] = 'true'
+os.environ['TESTING_MODE'] = 'false'
 
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
