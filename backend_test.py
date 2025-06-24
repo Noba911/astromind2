@@ -18,7 +18,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Get backend URL from frontend .env file
-BACKEND_URL = "https://4f8270fb-b134-4a32-b30f-a6fbe742ecb8.preview.emergentagent.com"
+BACKEND_URL = "https://c03276b9-d4f5-4056-a0cf-4910d784eb7c.preview.emergentagent.com"
 API_URL = f"{BACKEND_URL}/api"
 
 class AstrologyBackendTests(unittest.TestCase):
