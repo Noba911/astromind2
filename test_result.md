@@ -192,7 +192,7 @@ backend:
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
@@ -200,6 +200,9 @@ backend:
       - working: true
         agent: "testing"
         comment: "Friend communication advice API is working correctly. The API accepts multiple friend names and returns appropriate communication advice based on the user's astrological profile."
+      - working: "NA"
+        agent: "main"
+        comment: "Switched from TESTING_MODE to real Azure OpenAI integration. Needs retesting with real API."
 
 frontend:
   - task: "Frontend Implementation"
