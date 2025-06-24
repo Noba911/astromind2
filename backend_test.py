@@ -7,8 +7,8 @@ import unittest
 import os
 import logging
 
-# Set testing mode environment variable
-os.environ['TESTING_MODE'] = 'true'
+# Set testing mode environment variable to false to use real Azure OpenAI
+os.environ['TESTING_MODE'] = 'false'
 
 # Configure logging
 logging.basicConfig(
