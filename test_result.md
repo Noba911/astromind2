@@ -156,7 +156,7 @@ backend:
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
@@ -164,6 +164,9 @@ backend:
       - working: true
         agent: "testing"
         comment: "Daily horoscope API is working correctly with all three tones (serious, humorous, soul). Added mock responses for testing since the actual Azure OpenAI API key is not valid in the testing environment."
+      - working: "NA"
+        agent: "main"
+        comment: "Switched from TESTING_MODE to real Azure OpenAI integration. Updated configuration to use actual Azure OpenAI credentials. Needs retesting with real API."
 
   - task: "Compatibility Analysis API"
     implemented: true
