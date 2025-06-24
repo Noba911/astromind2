@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the astrology AI backend that I just built. The backend includes user authentication, AI astrology features using Azure OpenAI, and user profile management."
+user_problem_statement: "Test the astrology AI backend that I just built. The backend includes user authentication, AI astrology features using Azure OpenAI, and user profile management. UPDATE: Now using real Azure OpenAI credentials instead of mocked data for horoscope generation."
 
 backend:
   - task: "User Registration API"
