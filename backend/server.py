@@ -138,8 +138,7 @@ async def create_llm_chat(system_message: str) -> LlmChat:
         api_key=AZURE_OPENAI_API_KEY,
         session_id=str(uuid.uuid4()),
         system_message=system_message,
-        api_base=AZURE_OPENAI_ENDPOINT,
-        deployment_name=AZURE_OPENAI_DEPLOYMENT
+        azure_deployment=AZURE_OPENAI_DEPLOYMENT
     ).with_model("azure_openai", "gpt-4o")
     return chat
 
