@@ -149,7 +149,7 @@ async def create_llm_chat(system_message: str) -> LlmChat:
         api_key=AZURE_OPENAI_API_KEY,
         session_id=str(uuid.uuid4()),
         system_message=system_message
-    ).with_model(f"azure/{AZURE_OPENAI_DEPLOYMENT}", "gpt-4o")
+    ).with_model(f"azure/{AZURE_OPENAI_DEPLOYMENT}")
     return chat
 
 # Mock LLM Chat class for testing
