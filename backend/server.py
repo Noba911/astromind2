@@ -134,11 +134,13 @@ async def create_llm_chat(system_message: str) -> LlmChat:
         return MockLlmChat(system_message)
     
     # Real implementation for production with Azure OpenAI
+    # Format the API key to include the endpoint for Azure OpenAI
+    azure_api_key = f"{AZURE_OPENAI_API_KEY}:{AZURE_OPENAI_ENDPOINT}:{AZURE_OPENAI_DEPLOYMENT}"
+    
     chat = LlmChat(
-        api_key=AZURE_OPENAI_API_KEY,
+        api_key=azure_api_key,
         session_id=str(uuid.uuid4()),
-        system_message=system_message,
-        azure_deployment=AZURE_OPENAI_DEPLOYMENT
+        system_message=system_message
     ).with_model("azure_openai", "gpt-4o")
     return chat
 
