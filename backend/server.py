@@ -140,11 +140,16 @@ async def create_llm_chat(system_message: str) -> LlmChat:
         return MockLlmChat(system_message)
     
     # Real implementation for production with Azure OpenAI
+    # Configure environment variables for LiteLLM Azure OpenAI
+    os.environ["AZURE_API_KEY"] = AZURE_OPENAI_API_KEY
+    os.environ["AZURE_API_BASE"] = AZURE_OPENAI_ENDPOINT
+    os.environ["AZURE_API_VERSION"] = "2023-05-15"
+    
     chat = LlmChat(
         api_key=AZURE_OPENAI_API_KEY,
         session_id=str(uuid.uuid4()),
         system_message=system_message
-    ).with_model("azure", "gpt-4o")
+    ).with_model(f"azure/{AZURE_OPENAI_DEPLOYMENT}", "gpt-4o")
     return chat
 
 # Mock LLM Chat class for testing
