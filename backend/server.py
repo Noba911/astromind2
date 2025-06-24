@@ -30,7 +30,7 @@ db = client[os.environ['DB_NAME']]
 # Azure OpenAI Configuration
 AZURE_OPENAI_API_KEY = "FPXTnKX40wdOdApyYQTW9Arppc6zFBjnf2kcd6WpBt9qfrA4UcnxJQQJ99BFAC5RqLJXJ3w3AAABACOGYES0"
 AZURE_OPENAI_ENDPOINT = "https://astrology-ai.openai.azure.com/"
-AZURE_OPENAI_DEPLOYMENT = "astrology-ai"
+AZURE_OPENAI_DEPLOYMENT = "gpt-4o"  # Try common deployment name
 
 # Set environment variables for litellm
 os.environ["AZURE_API_KEY"] = AZURE_OPENAI_API_KEY
